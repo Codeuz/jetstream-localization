@@ -30,6 +30,8 @@ Emails views files are published at **ressources/views/vendor/mail** (See [Larav
 Emails translations are published at **ressources/lang/[LANG]/mails**.
 
 Emails for authentication are defined into **App/Providers/AuthServiceProvider.php**.
+
+**MAIL_FROM_ADDRESS** must be defined into **.env** file
     
 ## Available Stacks
 Only Livewire is supported for now and will be automatically installed.
