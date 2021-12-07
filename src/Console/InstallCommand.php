@@ -40,11 +40,11 @@ class InstallCommand extends Command
     {
         // Install Localization
         $this->info('Install cdz/localization ...');
-        /*$this->call('cdz-localization:install');
+        $this->call('cdz-localization:install');
 
         // Install Jetstream*/
         $this->info('Install Jetstream ...');
-        /*$this->call('jetstream:install', ['stack' => 'livewire']);*/
+        $this->call('jetstream:install', ['stack' => 'livewire']);
 
         // Create directories
         $this->info('Install cdz/jetstream-localization ...');

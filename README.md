@@ -15,6 +15,10 @@ After Composer has installed the package, you may run the **cdz-jetstream-locali
     npm install
     npm run dev
     
+Then migrate your database:
+
+    php artisan migrate
+    
 Now your home url and the authentication pages should be accessible in several languages.
 
 ## Configuration
