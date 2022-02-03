@@ -15,7 +15,7 @@ class Authenticate extends Middleware
     protected function redirectTo($request)
     {
         if (! $request->expectsJson()) {
-            return route(app()->getLocale().'.home');
+            return route(app()->getLocale().'.'.trim(config('fortify.routes.private'), '/'));
         }
     }
 }

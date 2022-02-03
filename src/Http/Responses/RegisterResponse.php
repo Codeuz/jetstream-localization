@@ -5,6 +5,7 @@ namespace Cdz\JetstreamLocalization\Http\Responses;
 use Laravel\Fortify\Contracts\RegisterResponse as RegisterResponseContract;
 use Illuminate\Http\JsonResponse;
 use Laravel\Fortify\Fortify;
+use App\Providers\RouteServiceProvider;
 
 class RegisterResponse implements RegisterResponseContract
 {
@@ -18,6 +19,6 @@ class RegisterResponse implements RegisterResponseContract
     {
         return $request->wantsJson()
             ? new JsonResponse('', 201)
-            : redirect()->intended(localization()->route(Fortify::redirects('register')));
+            : redirect()->route(app()->getLocale().'.'.trim(config('fortify.routes.private'), '/'));
     }
 }

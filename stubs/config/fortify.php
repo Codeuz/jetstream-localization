@@ -50,18 +50,33 @@ return [
 
     'email' => 'email',
 
-    /*
-    |--------------------------------------------------------------------------
-    | Home Path
-    |--------------------------------------------------------------------------
-    |
-    | Here you may configure the path where users will get redirected during
-    | authentication or password reset when the operations are successful
-    | and the user is authenticated. You are free to change this value.
-    |
-    */
+    'routes' => [
+        /*
+        |--------------------------------------------------------------------------
+        | Private Path
+        |--------------------------------------------------------------------------
+        |
+        | Here you may configure the path where users will get redirected during
+        | authentication or password reset when the operations are successful
+        | and the user is authenticated. You are free to change this value.
+        |
+        */
 
-    'home' => RouteServiceProvider::HOME,
+        'private' => RouteServiceProvider::PRIVATE_ROUTE,
+
+        /*
+        |--------------------------------------------------------------------------
+        | Public Path
+        |--------------------------------------------------------------------------
+        |
+        | Here you may configure the path where anonymous users will get redirected
+        | when the user is not authenticated. You are free to change this value.
+        |
+        */
+
+        'public' => RouteServiceProvider::PUBLIC_ROUTE,
+
+    ],
 
     /*
     |--------------------------------------------------------------------------

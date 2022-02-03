@@ -17,7 +17,6 @@ class LoginResponse implements LoginResponseContract
     {
         return $request->wantsJson()
             ? response()->json(['two_factor' => false])
-            : redirect()->route(app()->getLocale().'.'.trim(RouteServiceProvider::HOME, '/'));
+            : redirect()->route(app()->getLocale().'.'.trim(config('fortify.routes.private'), '/'));
     }
 }
-

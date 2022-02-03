@@ -98,6 +98,7 @@ class InstallCommand extends Command
 
         // Providers
         copy(__DIR__.'/../../stubs/App/Providers/AuthServiceProvider.php', app_path('Providers/AuthServiceProvider.php'));
+        copy(__DIR__.'/../../stubs/App/Providers/RouteServiceProvider.php', app_path('Providers/RouteServiceProvider.php'));
 
         // Migrations
         if ($this->getMigration('create_users_table')) {

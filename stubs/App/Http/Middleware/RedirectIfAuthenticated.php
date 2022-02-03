@@ -23,7 +23,7 @@ class RedirectIfAuthenticated
 
         foreach ($guards as $guard) {
             if (Auth::guard($guard)->check()) {
-                return redirect()->route(app()->getLocale().'.'.trim(RouteServiceProvider::HOME, '/'));
+                return redirect()->route(app()->getLocale().'.'.trim(config('fortify.routes.private'), '/'));
             }
         }
 

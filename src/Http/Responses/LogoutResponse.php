@@ -16,7 +16,7 @@ class LogoutResponse extends FortifyLogoutResponse
     public function toResponse($request)
     {
         return $request->wantsJson()
-                    ? new JsonResponse('', 204)
-                    : redirect(localization()->route('home'));
+            ? new JsonResponse('', 204)
+            : redirect()->route(app()->getLocale().'.'.trim(config('fortify.routes.public'), '/'));
     }
 }
